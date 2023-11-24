@@ -311,3 +311,94 @@ Security challenges include vulnerabilities in base images, improper handling of
 Container orchestration, exemplified by tools like Kubernetes or Docker Swarm, addresses scalability and deployment challenges by automating the management of containerized applications. Orchestration tools facilitate load balancing, scaling, rolling updates, and service discovery, ensuring efficient and reliable deployment at scale.
 
 
+
+=========
+
+
+
+### 1. **docker version**
+   - **Explanation:** Displays Docker version information including the client and server versions.
+
+### 2. **docker info**
+   - **Explanation:** Provides detailed information about Docker, including the number of containers and images, storage driver used, and system-related information.
+
+### 3. **docker images**
+   - **Explanation:** Lists all available Docker images on the local machine.
+
+### 4. **docker ps**
+   - **Explanation:** Lists all running containers.
+   - **Options:**
+     - `-a`: Shows all containers, including stopped ones.
+
+### 5. **docker pull \<image>**
+   - **Explanation:** Downloads a Docker image from a registry.
+   - **Example:** `docker pull ubuntu:20.04`
+
+### 6. **docker run \<image>**
+   - **Explanation:** Creates and starts a new container based on the specified image.
+   - **Options:**
+     - `-d`: Run in detached mode (in the background).
+     - `-p <host_port>:<container_port>`: Maps a host port to a container port.
+     - `--name <container_name>`: Assigns a name to the container.
+     - `-e <key=value>`: Sets environment variables.
+
+### 7. **docker exec -it \<container> \<command>**
+   - **Explanation:** Runs a command inside a running container.
+   - **Options:**
+     - `-it`: Opens an interactive terminal.
+
+### 8. **docker stop \<container>**
+   - **Explanation:** Stops a running container.
+   - **Options:**
+     - `-t <seconds>`: Specifies a timeout period before forcibly stopping the container.
+
+### 9. **docker rm \<container>**
+   - **Explanation:** Removes one or more stopped containers.
+   - **Options:**
+     - `-f`: Force removal of a running container.
+
+### 10. **docker rmi \<image>**
+   - **Explanation:** Removes one or more Docker images.
+   - **Options:**
+     - `-f`: Force removal of the image.
+
+### 11. **docker build -t \<tag> \<path>**
+   - **Explanation:** Builds a Docker image from a Dockerfile in the specified path.
+   - **Options:**
+     - `-t <tag>`: Tags the image with a name and optional version.
+
+### 12. **docker-compose up**
+   - **Explanation:** Starts services defined in a `docker-compose.yml` file.
+   - **Options:**
+     - `-d`: Run in detached mode.
+     - `--build`: Builds images before starting containers.
+
+### 13. **docker-compose down**
+   - **Explanation:** Stops and removes containers, networks, and volumes defined in a `docker-compose.yml` file.
+   - **Options:**
+     - `--volumes`: Removes volumes associated with services.
+
+### 14. **docker network ls**
+   - **Explanation:** Lists all Docker networks.
+
+### 15. **docker volume ls**
+   - **Explanation:** Lists all Docker volumes.
+
+### 16. **docker logs \<container>**
+   - **Explanation:** Displays the logs of a running or stopped container.
+   - **Options:**
+     - `--tail <number>`: Shows only the last specified number of lines.
+
+### 17. **docker inspect \<container or image>**
+   - **Explanation:** Displays detailed information about a container or image in JSON format.
+
+### 18. **docker-compose logs**
+   - **Explanation:** Displays the logs of services defined in a `docker-compose.yml` file.
+
+### 19. **docker-compose ps**
+   - **Explanation:** Lists the containers associated with services defined in a `docker-compose.yml` file.
+
+### 20. **docker system prune**
+   - **Explanation:** Removes unused data, including stopped containers, networks not used by at least one container, and dangling images.
+
+
